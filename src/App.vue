@@ -1,12 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">axios</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <keep-alive><router-view/></keep-alive>
+    <el-menu router :default-active="$route.path" class="el-menu-demo" mode="horizontal">
+      <el-menu-item index="/">axios</el-menu-item>
+      <el-menu-item index="/about">about</el-menu-item>
+    </el-menu>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
+
+<script>
+import axios from './components/axios.vue'
+
+export default {
+  name: 'app',
+  components: {
+    axios
+  }
+}
+</script>
 
 <style>
 #app {
