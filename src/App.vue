@@ -1,19 +1,12 @@
 <template>
   <div id="app">
-    <axios msg="Welcome to Your Vue.js App"/>
+    <div id="nav">
+      <router-link to="/">axios</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <keep-alive><router-view/></keep-alive>
   </div>
 </template>
-
-<script>
-import axios from './components/axios.vue'
-
-export default {
-  name: 'app',
-  components: {
-    axios
-  }
-}
-</script>
 
 <style>
 #app {
