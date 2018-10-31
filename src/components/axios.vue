@@ -1,8 +1,10 @@
 <template>
-  <div class="hello">
-    <ul>
-      <li v-for="(item, index) in info" :key="index"><a :href="item.navigationUrl">ID:{{index}} {{item.title}} <img :src="item.imageUrl" /></a></li>
-    </ul>
+  <div class="axios">
+    <el-card class="box-card">
+      <div v-for="(item, index) in info" :key="index" class="text item">
+       {{item.title}}
+      </div>
+    </el-card>
   </div>
 </template>
 
@@ -46,14 +48,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  margin: 0 10px;
-}
-li img{
-  width: 50px;
-}
 </style>

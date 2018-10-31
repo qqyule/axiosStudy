@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="about">
     <ul>
       <li v-for="(item, index) in info" :key="index"><a :href="item.navigationUrl">ID:{{index}} {{item.title}} <img :src="item.imageUrl" /></a></li>
     </ul>
